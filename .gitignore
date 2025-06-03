@@ -1,0 +1,22 @@
+# Node backend
+backend/node_modules/
+backend/uploads/
+backend/.env
+
+# Python model
+model-server/__pycache__/
+model-server/*.pkl
+model-server/*.faiss
+model-server/embeddings.index
+model-server/requirements.txt
+model-server/uploaded_docs/
+model-server/.env
+
+# React frontend
+frontend/node_modules/
+frontend/.env
+
+# Others
+*.log
+.DS_Store
+.env
