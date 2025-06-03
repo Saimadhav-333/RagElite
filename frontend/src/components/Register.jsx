@@ -17,7 +17,6 @@ import API from '../services/api';
 
 function Register() {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user');
   const [error, setError] = useState('');
@@ -33,7 +32,6 @@ function Register() {
     try {
       await API.post('/api/auth/register', {
         username,
-        email,
         password,
         role,
       });
@@ -86,19 +84,6 @@ function Register() {
               autoFocus
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-            />
-            
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
             
             <TextField
